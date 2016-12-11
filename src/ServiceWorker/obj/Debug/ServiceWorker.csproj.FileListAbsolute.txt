@@ -1,0 +1,17 @@
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\ServiceWorker.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\ServiceWorker.pdb
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Core.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Interfaces.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Linq.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.PlatformServices.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Windows.Threading.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\WCFAvtodictor2PcTableContract.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\WCFAvtodictor2PcTableContract.pdb
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Core.xml
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Interfaces.xml
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Linq.xml
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.PlatformServices.xml
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Windows.Threading.xml
+D:\Git\PcTable\src\ServiceWorker\obj\Debug\ServiceWorker.csprojResolveAssemblyReference.cache
+D:\Git\PcTable\src\ServiceWorker\obj\Debug\ServiceWorker.dll
+D:\Git\PcTable\src\ServiceWorker\obj\Debug\ServiceWorker.pdb
