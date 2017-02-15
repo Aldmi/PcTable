@@ -37,7 +37,7 @@ namespace ServiceWorker.Host
         {
             try
             {
-                StatChange.OnNext(displayData);
+                StatChange.OnNext(displayData);             // вызов события для оповешения UI
 
                 await Task.Delay(100);
                 return true;

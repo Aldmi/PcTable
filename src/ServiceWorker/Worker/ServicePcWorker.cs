@@ -38,6 +38,7 @@ namespace ServiceWorker.Worker
                 _service.AddServiceEndpoint(ServiceMetadataBehavior.MexContractName, MetadataExchangeBindings.CreateMexHttpBinding(), "mex");
 
                 //IContract EndPoint
+                //Зашищенное соединение 
                 WSHttpBinding binding = new WSHttpBinding(SecurityMode.None, true);
                 binding.OpenTimeout = new TimeSpan(0, 0, 20);
                 binding.CloseTimeout = new TimeSpan(0, 0, 20);
