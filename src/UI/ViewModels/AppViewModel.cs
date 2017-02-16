@@ -4,11 +4,12 @@ using Caliburn.Micro;
 using Castle.Facilities.WcfIntegration;
 using Castle.Windsor;
 using ServiceWorker.Worker;
+using WCFAvtodictor2PcTableContract.DataContract;
 
 
 namespace UI.ViewModels
 {
-    public class AppViewModel : Conductor<object>
+    public class AppViewModel : Conductor<object>, IHandle<UniversalDisplayType>
     {
         #region field
 
@@ -20,7 +21,19 @@ namespace UI.ViewModels
         #endregion
 
 
+        private string _message;
+        public string Message
+        {
+            get { return _message; }
+            set
+            {
+                _message = value;
+                NotifyOfPropertyChange(() => Message);
+            }
+        }
 
+
+        public BindableCollection<UniversalDisplayType> UniversalDisplayTypes { get; set; }= new BindableCollection<UniversalDisplayType>();
 
 
         #region ctor
@@ -31,9 +44,29 @@ namespace UI.ViewModels
             _windowManager = windowManager;
             _windsorContainer = windsorContainer;
 
-           _servicePcWorker = new ServicePcWorker();
+            _eventAggregator.Subscribe(this);
+
+            _servicePcWorker = new ServicePcWorker(eventAggregator);
            _servicePcWorker.OpenEndPoint();
 
+            Message = "sfsfgfds";
+
+        }
+
+        #endregion
+
+
+
+
+
+        #region Events
+
+        public void Handle(UniversalDisplayType message)
+        {
+
+            Message = message.Message;
+
+            UniversalDisplayTypes.Add(message);
         }
 
         #endregion

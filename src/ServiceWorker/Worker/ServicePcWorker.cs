@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
+using Caliburn.Micro;
 using ServiceWorker.Host;
 using WCFAvtodictor2PcTableContract.Contract;
 using WCFAvtodictor2PcTableContract.DataContract;
@@ -9,10 +10,22 @@ namespace ServiceWorker.Worker
 {
     public class ServicePcWorker : IDisposable
     {
-        // Ссылка на экзкмпляр ServiceHost.
-        ServiceHost _service = null;
+        private readonly IEventAggregator _iventAggregator;
+       
+        ServiceHost _service = null;   // Ссылка на экзкмпляр ServiceHost.
 
         private IDisposable DisposableDataSended { get; set; }
+
+
+
+
+
+        public ServicePcWorker(IEventAggregator iventAggregator)
+        {
+            _iventAggregator = iventAggregator;
+        }
+
+
 
 
 
@@ -39,7 +52,8 @@ namespace ServiceWorker.Worker
 
                 //IContract EndPoint
                 //Зашищенное соединение 
-                WSHttpBinding binding = new WSHttpBinding(SecurityMode.None, true);
+                // WSHttpBinding binding = new WSHttpBinding(SecurityMode.None, true);
+                BasicHttpBinding binding = new BasicHttpBinding();
                 binding.OpenTimeout = new TimeSpan(0, 0, 20);
                 binding.CloseTimeout = new TimeSpan(0, 0, 20);
                 binding.SendTimeout = new TimeSpan(0, 0, 5);       //таймаут на Запрос-ответ
@@ -58,7 +72,7 @@ namespace ServiceWorker.Worker
         //Обработчики события.
         public void DataSended(UniversalDisplayType status) //вызовется если издатель вызовет StatChange.OnNext();  
         {
-
+            _iventAggregator.PublishOnUIThread(status);
         }
 
         public void OnError(Exception ex) //вызовется если издатель вызовет StatChange.OnError();   

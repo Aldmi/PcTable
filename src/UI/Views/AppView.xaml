@@ -9,5 +9,12 @@
     Width="300"
     Height="300"
     mc:Ignorable="d">
-    <Grid />
+    <Grid>
+
+        <TextBox
+            x:Name="Message"
+            MaxHeight="100"
+            MaxLength="100" />
+
+    </Grid>
 </Window>

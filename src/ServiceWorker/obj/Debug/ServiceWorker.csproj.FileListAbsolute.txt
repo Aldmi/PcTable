@@ -15,3 +15,5 @@ D:\Git\PcTable\src\ServiceWorker\bin\Debug\System.Reactive.Windows.Threading.xml
 D:\Git\PcTable\src\ServiceWorker\obj\Debug\ServiceWorker.csprojResolveAssemblyReference.cache
 D:\Git\PcTable\src\ServiceWorker\obj\Debug\ServiceWorker.dll
 D:\Git\PcTable\src\ServiceWorker\obj\Debug\ServiceWorker.pdb
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\Caliburn.Micro.dll
+D:\Git\PcTable\src\ServiceWorker\bin\Debug\Caliburn.Micro.xml
